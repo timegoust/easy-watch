@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html">
+<html>
+<head>
+<title> serjun </title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+</head>
+<body style="background-color:black">
+<style>
+/* 下拉按钮样式 */
+.linkbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+/* 容器 <div> - 需要定位下拉内容 */
+.topbar {
+    float: left;
+    position: relative;
+    display: inline-block;
+
+}
+
+/* 下拉内容 (默认隐藏) */
+.changelink {
+    display: none;
+    position: relative;
+    right: 16;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* 下拉菜单的链接 */
+.changelink a {
+    color: black;
+    padding: 16px 16px;
+    text-decoration: none;
+	display: inline-block;	
+}
+/* 鼠标移上去后修改下拉菜单链接颜色 */
+.changelink a:hover {background-color: #f1f1f1}
+/* 在鼠标移上去后显示下拉菜单 */
+.topbar:hover .changelink {
+    display: inline-block;    
+}
+/* 当下拉内容显示后修改下拉按钮的背景颜色 */
+.topbar:hover .dropbtn {
+    background-color: #3e8e41;
+}
+/*調整實況畫面*/
+.steam_video {
+     padding:0px;
+     position:absolute;
+     top: 15%;
+     height:84%;
+     width: 70%;
+}
+/*調整實況聊天室*/
+
+.steam_chat {
+     padding:0px;
+     position:absolute;
+     top: 15%;
+     left: 70%;
+     height:84%;
+     width: 29%;
+}
+
+</style>
+<div class="topbar">
+<button class="linkbtn">menu</button>
+<div class="changelink">
+<a href="https://www.twitch.tv/products/serjunplaygame/ticket/new?ref=below_video_subscribe_button" target=_new>訂閱</a>
+<a href="javascript: void(0)" onclick="cs1()">圖奇</a>
+<a href="javascript: void(0)" onclick="cs2()">俄羅斯</a>
+
+
+</div>
+</div>
+<div  class="steam_video" >
+<iframe id="video_URL"src="https://player.twitch.tv/?channel=serjunplaygame" style="width:100%; height:100%;" allowtransparency="true" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
+</div>
+<div class="steam_chat">
+<iframe src="https://www.twitch.tv/embed/serjunplaygame/chat" height="100%" width="100%"></iframe>
+</div>
+</body>	
+<script>
+function cs1()
+{
+document.getElementById("video_URL").src="https://player.twitch.tv/?channel=serjunplaygame";
+}
+function cs2()
+{
+document.getElementById("video_URL").src="https://api.cybergame.tv/p/embed.php?c=serjunbb&type=embed&w=100pc&h=100pc&auto=true&advforced=true";
+}
+function cs3()
+{
+document.getElementById("video_URL").src="-";
+}
+function cs4()
+{
+document.getElementById("video_URL").src="-";
+}
+
+</script>
+
+</html>
